@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event dashboard </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Smart Event Dashboard</h1>
+    <div id="main-event-add-container">
+        <h3>Add New Event</h3>
+        <form>
+            <label for="Event-title">Event Title:</label>
+            <input type="text" id="Event-title" name="Event-title" required><br><br>
+            <label for="Event-date">Event Date:</label>
+            <input type="date" id="Event-date" name="Event-date" required><br><br>
+            <label for="event-categories">Categories:</label>
+            <select id="event-categories" name="event-categories">
+                <option value="Conference">Conference</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Seminar">webinar</option>
+                <option value="Meetup">Meetup</option>
+                <option value="social">Social</option>
+            </select><br><br>
+            <label for="event-description">Event Description:</label><br>
+            <textarea id="event-description" name="event-description" rows="4" cols="50"></textarea><br><br>
+            <button type="submit">Add Event</button>    
+        </form>
+    </div>
+    <div>
+        <h3>My Events </h3>
+        <div>
+            <button id="clear-event-btn">Clear All Events</button>
+            <button id="add-simple-btn">Add Simple Events</button>
+        </div>
+        <div id="all-events-container">
+            No Event Yet
+        </div>
+
+    </div>
+    <script>
+        let form=document.querySelector("form");
+        let title=document.getElementById("Event-title");
+        let date=document.getElementById("Event-date");
+        let category=document.getElementById("event-categories");
+        let description=document.getElementById("event-description");
+        let allEventsContainer=document.getElementById("all-events-container");
+
+        function addEventFunction(event){
+            event.preventDefault();
+            let card=document.createElement("div");
+
+            card.innerHTML=`<button>X</button>
+                            <h4>${title.value}</h4>
+                            <span>${date.value}</span>
+                            <span>${category.value}</span>
+                            <p>${description.value}</p>`
+            allEventsContainer.append(card);
+            form.reset();
+        }
+        form.addEventListener("submit",addEventFunction)
+    </script>
+</body>
+</html>

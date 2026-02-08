@@ -1,0 +1,140 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 28px;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#main-event-add-container {
+    background: #ffffff;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    border-top: 4px solid #4a90e2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#main-event-add-container h3 {
+    margin-top: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+form input, 
+form select, 
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+form button {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background: #357abd;
+}
+
+#all-events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    min-height: 100px;
+}
+
+#all-events-container > div {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: calc(33.333% - 14px);
+    box-sizing: border-box;
+    position: relative;
+}
+
+#all-events-container h4 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#all-events-container span {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 2px 8px;
+    font-size: 11px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+#all-events-container p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+#all-events-container button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+}
+
+#all-events-container button:hover {
+    color: #ff0000;
+}
+
+#clear-event-btn, 
+#add-simple-btn {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: 1px solid #4a90e2;
+    background: transparent;
+    color: #4a90e2;
+    cursor: pointer;
+}
+
+#clear-event-btn {
+    border-color: #d9534f;
+    color: #d9534f;
+}
+
+@media (max-width: 768px) {
+    #all-events-container > div {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    #all-events-container > div {
+        width: 100%;
+    }
+}
