@@ -1,5 +1,5 @@
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
     background-color: #f0f2f5;
     color: #333;
     padding: 40px 20px;
@@ -137,4 +137,5 @@ form button:hover {
     #all-events-container > div {
         width: 100%;
     }
+
 }
